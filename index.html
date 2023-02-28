@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snow Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            height: 100vh;
+            position: relative;
+            background-image: url(img/house.jpg);
+            background-size: cover;
+            background-position: bottom;
+        }
+        .snow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url(img/snow.png);
+            background-repeat: repeat;
+            animation: snow 120s linear infinite;
+        }
+        .snow-behind {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url(img/snow.png);
+            background-repeat: repeat;
+            opacity: .3;
+            animation: snowBehind 120s linear infinite;
+        }
+
+        @keyframes snow {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 0 800em;
+            }
+        }
+        @keyframes snowBehind {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 500em 500em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="snow-behind"></div>
+        <div class="snow"></div>
+    </main>
+</body>
+</html>
